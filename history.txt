@@ -1,0 +1,22 @@
+Comandos usados:
+Parte1:
+docker build -t miniep6:1.0 .
+
+docker run -p 8080:80 miniep6:1.0
+
+
+
+Parte2:
+docker container stop my-caddy-server
+docker container rm my-caddy-server
+
+docker image build . -t custom-caddy:2.5.0-alpine
+
+docker container run                                                            \
+	--name miniep6                                                              \
+	-p 8080:80                                                                         \
+	-d                                                                                       \
+	-v /home/kane1/cringe/miniep6:/usr/src/pages       \
+	custom-caddy:2.5.0-alpine
+
+
