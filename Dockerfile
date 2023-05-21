@@ -1,5 +1,4 @@
-# Use a imagem base do Caddy
-FROM caddy
+FROM caddy:alpine
 
 # Crie a pasta /usr/src/pages dentro da imagem
 RUN mkdir -p /usr/src/pages
